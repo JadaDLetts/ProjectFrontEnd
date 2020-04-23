@@ -24,7 +24,8 @@ export class LessonComponent implements OnInit {
   }
 
   deleteLessonById(departmentId, teacherId, courseId, lessonId) {
-    this.lessons = this.lessons.filter(lesson => lesson.id !== lessonId);
+    this.l.deleteLessonById(departmentId, teacherId, courseId, lessonId).
+    then(lessons => this.lessons = lessons);
   }
 
   ngOnInit() {

@@ -9,4 +9,11 @@ export class CourseServiceClient {
   findAllCourses = (departmentId, teacherId) =>
     fetch(`http://localhost:8080/api/departments/${departmentId}/teachers/ ${teacherId}/courses`)
     .then(response => response.json())
+
+  deleteCourseById = (departmentId, teacherId, courseId) =>
+    fetch(`http://localhost:8080/api/departments/${departmentId}/teachers/${teacherId}
+    /courses/${courseId}`,
+      {method: 'delete'})
+      .then(response => response.json())
+
 }

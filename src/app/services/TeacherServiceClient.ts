@@ -8,6 +8,7 @@ export class TeacherServiceClient {
 
 
 deleteTeacherById = (departmentId, teacherId) =>
-  fetch(`http://localhost:8080/api/departments/${departmentId}/teachers/${teacherId}`)
+  fetch(`http://localhost:8080/api/departments/${departmentId}/teachers/${teacherId}`,
+    {method: 'delete'})
     .then(response => response.json())
 }

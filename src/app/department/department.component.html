@@ -11,10 +11,6 @@
     (click)="selectDepartment(department)"
     [ngClass] ="{'active': department.id == selectedDepartment.id}"
     class= "list-group-item" routerLink="/departments/{{department.id}}">
-     {{department.department_name}} &nbsp; <button (click)="deleteDepartment(department.id)">del.</button>
+     {{department.department_name}} &nbsp; <button (click)="deleteDepartmentById(department.id)">del. </button>
   </li>
 </ul>
-<!--(click) = "selectDepartment(department)"-->
-<!--[ngClass}="{'active': department.id == selectedDepartment.id}"-->
-
-<!--{{selectedDepartment.department_name}}-->

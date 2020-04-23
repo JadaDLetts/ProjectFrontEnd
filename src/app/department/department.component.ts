@@ -27,17 +27,17 @@ export class DepartmentComponent implements OnInit {
   };
 
 
-  constructor(private d: DepartmentServiceClient) {
+  constructor(private service: DepartmentServiceClient) {
   }
 
   ngOnInit() {
-    this.d.findAllDepartments()
+    this.service.findAllDepartments()
       .then(departments => {
         this.departments = departments;
       });
   }
 
-  deleteDepartment = (departmentId) =>
+  deleteDepartmentById = (departmentId) =>
     // this.d.deleteDepartmentById(department.id)
     //   .then(departments => {
     //     this.departments = departments;
@@ -45,16 +45,11 @@ export class DepartmentComponent implements OnInit {
    // this.d.deleteDepartmentById(department.id).then(departments => {
    //   this.departments = departments;
    //  })
-  this.departments = this.departments.filter(department => department.id !== departmentId)
-
+  this.service.deleteDepartmentById(departmentId)
 
 
   selectDepartment(department) {
     this.selectedDepartment = department;
-  }
-
-  updateDepartment(department_name) {
-    
   }
 
 

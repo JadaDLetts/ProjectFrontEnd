@@ -29,7 +29,10 @@ export class TeacherComponent implements OnInit {
     //   .then(departments => {
     //     this.departments = departments;
     //   });
-    this.teachers = this.teachers.filter(teacher => teacher.id !== teacherId);
+    // this.t.deleteTeacherById(departmentId, teacherId)
+    //   .then(teachers => this.teachers = teachers);
+
+      this.t.deleteTeacherById(departmentId, teacherId);
   }
 
   ngOnInit() {
@@ -49,7 +52,7 @@ export class TeacherComponent implements OnInit {
 
     this.activatedRoute.params.subscribe(params => {
       this.departmentId = params.departmentId;
-      this.t.findAllTeachers(params.departmentId)
+      this.t.findAllTeachers(this.departmentId)
       .then(teachers => {
         this.teachers = teachers;
       });
