@@ -2,17 +2,16 @@
   <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     Departments</h3>
 </div>
-<div class="row">
-<!--<button (click) = "createDepartment()"> Create New Course </button>-->
-</div>
+
 
 <ul class="list-group" >
+  <button (click) = "createDepartment()"> Create New Department </button>
   <li
     *ngFor="let department of departments"
     (click)="selectDepartment(department)"
     [ngClass] ="{'active': department.id == selectedDepartment.id}"
     class= "list-group-item" routerLink="/departments/{{department.id}}">
-     {{department.department_name}} &nbsp; <button (click)="deleteDepartment(department)">del.</button>
+     {{department.department_name}} &nbsp; <button (click)="deleteDepartment(department.id)">del.</button>
   </li>
 </ul>
 <!--(click) = "selectDepartment(department)"-->

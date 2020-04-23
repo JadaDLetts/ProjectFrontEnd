@@ -9,6 +9,15 @@ import {DepartmentServiceClient} from '../services/DepartmentServiceClient';
 export class DepartmentComponent implements OnInit {
 
   departments = [];
+   department = {
+     id: 0,
+     department_name: '',
+  //   number: 0,
+     teachers: [],
+     courses: [],
+     lessons: [],
+     homeworks: [],
+   };
   selectedDepartment = {
     // students: [],
     teachers: [],
@@ -28,15 +37,15 @@ export class DepartmentComponent implements OnInit {
       });
   }
 
-  deleteDepartment = (department) =>
+  deleteDepartment = (departmentId) =>
     // this.d.deleteDepartmentById(department.id)
     //   .then(departments => {
     //     this.departments = departments;
     //   });
-   this.d.deleteDepartmentById(department.id).then(departments => {
-     this.departments = departments;
-    })
-
+   // this.d.deleteDepartmentById(department.id).then(departments => {
+   //   this.departments = departments;
+   //  })
+  this.departments = this.departments.filter(department => department.id !== departmentId)
 
 
 
@@ -44,7 +53,14 @@ export class DepartmentComponent implements OnInit {
     this.selectedDepartment = department;
   }
 
-  createDepartment() {
+  updateDepartment(department_name) {
+    
+  }
 
+
+  createDepartment() {
+    this.department.department_name = 'new dep'.toString();
+    this.department.id = this.departments.length;
+    this.departments.push(this.department);
   }
 }
