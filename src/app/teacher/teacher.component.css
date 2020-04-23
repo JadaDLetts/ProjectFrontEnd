@@ -1,0 +1,18 @@
+body{
+  text-align: center;
+}
+h3, h1{
+  color: white;
+}
+a{
+  color: black;
+}
+
+ul{
+  list-style-type: none;
+}
+
+.list-group-item:hover{
+  background-color: black;
+  color: white;
+}

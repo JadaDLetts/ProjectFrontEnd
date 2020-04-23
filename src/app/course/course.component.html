@@ -1,0 +1,16 @@
+<div class="row">
+  <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    Courses</h3>
+</div>
+
+<ul class="list-group">
+  <li
+    *ngFor="let course of courses"
+    (click)="selectCourse(course)"
+      [ngClass]="{'active': course.id == selectedCourse.id}"
+    class="list-group-item"
+        routerLink="/departments/{{departmentId}}/teachers/{{teacherId}}/courses/{{course.id}}">
+              {{course.course_name}} &nbsp; <button (click)="deleteCourseById(departmentId, teacherId, course.id)">del.</button>
+  </li>
+</ul>
+

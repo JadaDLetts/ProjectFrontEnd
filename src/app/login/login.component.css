@@ -1,0 +1,11 @@
+body {
+  background-color: black;
+  max-width: 4500px;
+  text-align: center;
+  color: white;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+

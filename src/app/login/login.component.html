@@ -1,0 +1,57 @@
+<div class="container-fluid">
+  <body>
+  <br/>
+    <div class="row">
+      <div class="col-12">
+        <h1>Login</h1>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-12">
+        <label class="wbdv-label wbdv-username">Username: &nbsp;</label>
+
+        <input [(ngModel)]="username" class="wbdv-field wbdv-username"/>
+
+      </div>
+    </div>
+    <br/>
+
+    <div class="row">
+      <div class="col-12">
+        <label class="wbdv-label wbdv-password">
+          Password: &nbsp;
+        </label>
+
+        <input [(ngModel)]="password" class="wbdv-field wbdv-password" type="password"/>
+
+      </div>
+    </div>
+    <br/>
+
+    <br/>
+
+    <div class="row">
+        <div class="col-4">
+          <button (click)="login(username,password)" routerLink="/profile"
+                  class="wbdv-link wbdv-button wbdv-login wbdv-profile-">
+            Log in
+          </button>
+        </div>
+      <br>
+        <div class="col-4">
+          <a routerLink="/">Home</a>
+        </div>
+      <br>
+      </div>
+    <div class="col-4">
+      <button routerLink="/profile"
+              class="wbdv-link wbdv-button wbdv-login wbdv-profile-">
+        Forgot your Password?
+      </button>
+    </div>
+  <br/>
+    <br/>
+  </body>
+</div>

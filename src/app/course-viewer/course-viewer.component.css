@@ -1,0 +1,18 @@
+.col-2, h3, h1{
+  text-align: center;color: white;
+
+}
+.list-group-item{
+  color: black;
+}
+h3, h1, a {
+  color: black;
+}
+body {
+  background-color: black;
+  /*max-width: 800px;*/
+  /*margin: auto;*/
+  width: 900px;
+  height: 900px;
+  text-align: center;
+}

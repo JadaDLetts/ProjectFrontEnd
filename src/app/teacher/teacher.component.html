@@ -1,0 +1,16 @@
+<div class="row">
+  <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Teachers</h3>
+</div>
+
+<ul class="list-group">
+  <li
+    *ngFor="let teacher of teachers"
+    (click)="selectTeacher(teacher)"
+    [ngClass]="{'active': teacher.id == selectedTeacher.id}"
+    class="list-group-item"
+       routerLink="/departments/{{departmentId}}/teachers/{{teacher.id}}">
+      &nbsp;&nbsp;Name: {{teacher.first_name}} {{teacher.last_name}} &nbsp;
+      &nbsp;  &nbsp; Credit Hours: {{teacher.credit_hours}}  &nbsp; <button (click)="deleteTeacherById(departmentId, teacher.id)">del.</button>
+  </li>
+</ul>
+

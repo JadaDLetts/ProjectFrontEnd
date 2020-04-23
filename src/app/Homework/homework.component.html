@@ -1,0 +1,18 @@
+<br>
+<div class="row">
+  <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    Homeworks</h3>
+</div>
+
+<ul class="list-group">
+  <li
+    *ngFor="let homework of homeworks"
+    (click) = "selectHomework(homework)"
+      [ngClass]="{'active': homework.id == selectedHomework.id}"
+     class="list-group-item"
+    routerLink="/departments/{{departmentId}}/teachers/{{teacherId}}/courses/{{courseId}}/lessons/{{lessonId}}/homeworks/{{homework.id}}">
+              Title: {{homework.homework_name}} Points: {{homework.homework_points}}
+    <button (click)="deleteHomeworkById(departmentId, teacherId, courseId, lessonId, homework.id)">del.</button>
+  </li>
+</ul>
+

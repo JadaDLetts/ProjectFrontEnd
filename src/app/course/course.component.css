@@ -1,0 +1,19 @@
+.col-2, h3, h1{
+  text-align: center;
+  color: white;
+}
+h3, h1 {
+  color: white;
+}
+ul{
+  list-style-type: none;
+}
+
+a{
+  color: black;
+}
+
+.list-group-item:hover, .list-group-item:focus {
+  background-color: black;
+  color: white;
+}
